@@ -1,11 +1,9 @@
 <?php
-$parentDir = dirname(__FILE__, 2);
-// print_r($parentDir);
-// return;
-// require_once dir('/vendor/autoload.php');
-require_once $parentDir . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
+require_once dirname(__FILE__, 2) . DIRECTORY_SEPARATOR . 'vendor' . DIRECTORY_SEPARATOR . 'autoload.php';
 
 use TelegramBot\Api\BotApi;
+
+
 $envPath = realpath(__DIR__ . '/../');
 if (!$envPath) {
     die('.env file not found');    
